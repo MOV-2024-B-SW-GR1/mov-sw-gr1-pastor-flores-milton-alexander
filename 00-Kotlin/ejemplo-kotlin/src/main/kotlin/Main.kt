@@ -42,6 +42,7 @@ fun main() {
 
 
     // -------------- LLAMADA DE FUNCIONES ---------------
+    // ----------------------------------------------------//
 
     imprimirNombre(ejemploVariable)
 
@@ -59,6 +60,8 @@ fun main() {
 
 
     // -------------------CLASES USO-----------------------
+    // ---------------------------------------------------//
+
     //4 instancias usando todos los constructores
     val sumaA = Suma(1,1)
     val sumaB = Suma(null,1)
@@ -153,7 +156,8 @@ fun main() {
 }
 
 
-//-------------FUNCIONES----------
+//-------------FUNCIONES------------------------
+//-----------------------------------------//
 
 fun imprimirNombre(nombre:String):Unit{
     fun otraFuncionAdentro(){
