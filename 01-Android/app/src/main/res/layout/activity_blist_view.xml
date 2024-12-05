@@ -7,4 +7,18 @@
     android:layout_height="match_parent"
     tools:context=".BListView">
 
+    <ListView
+        android:id="@+id/lv_list_view"
+        android:layout_width="195dp"
+        android:layout_height="660dp"
+        tools:layout_editor_absoluteX="88dp"
+        tools:layout_editor_absoluteY="78dp" />
+
+    <Button
+        android:id="@+id/btn_anadir_list_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Añadir"
+        tools:layout_editor_absoluteX="131dp"
+        tools:layout_editor_absoluteY="769dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

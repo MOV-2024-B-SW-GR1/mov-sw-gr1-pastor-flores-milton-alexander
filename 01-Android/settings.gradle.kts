@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "sw2024bgr1_mapf"
 include(":app")
+ 

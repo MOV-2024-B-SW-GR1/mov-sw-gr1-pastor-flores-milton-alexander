@@ -1,11 +1,13 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.google.firebase.appdistribution)
+    alias(libs.plugins.google.gms.google.services)
 }
 
 android {
     namespace = "com.example.sw2024bgr1_mapf"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.sw2024bgr1_mapf"
