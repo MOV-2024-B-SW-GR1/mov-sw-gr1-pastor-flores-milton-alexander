@@ -18,7 +18,7 @@ fun main() {
 
     val fechaNacimiento: Date = Date()
 
-    //---- When ----------
+    //---- WHEN ----------
     val estadoCivilWhen = "C"
 
     when (estadoCivilWhen) {
