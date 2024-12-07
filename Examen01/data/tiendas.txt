@@ -1,0 +1,1 @@
+2,Tienda Norte,Norte de la Ciudad,false,2023-10-05
