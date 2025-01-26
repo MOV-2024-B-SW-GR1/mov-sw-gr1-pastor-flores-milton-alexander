@@ -122,6 +122,24 @@ class MainActivity : AppCompatActivity() {
                 irActividad(ECrudEntrenador::class.java)
             }
 
+        val botonRecylerView = findViewById<Button>(R.id.btn_recycler_view)
+        botonRecylerView
+            .setOnClickListener {
+                irActividad(FRecyclerView::class.java)
+            }
+
+        val botonGMaps = findViewById<Button>(R.id.btn_google_maps)
+        botonGMaps
+            .setOnClickListener {
+                irActividad(GGoogleMaps::class.java)
+            }
+
+        val auth = findViewById<Button>(R.id.btn_intent_firebase_ui)
+        botonGMaps
+            .setOnClickListener {
+                irActividad(HFirebaseUIAuth::class.java)
+            }
+
     }
     fun irActividad(clase:Class<*>){
         startActivity(Intent(this, clase))

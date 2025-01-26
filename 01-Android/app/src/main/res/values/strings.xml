@@ -11,5 +11,6 @@
         <item>Martes</item>
         <item>Miercoles</item>
     </string-array>
+    <string name="title_activity_ggoogle_maps_placeholder">GGoogleMapsPlaceholder</string>
 
 </resources>
