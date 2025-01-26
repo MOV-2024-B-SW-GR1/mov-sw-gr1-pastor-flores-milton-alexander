@@ -13,17 +13,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/saludo"
-        android:textColor="@color/text_color"
-        android:textColorLink="@color/saludo_color"
-        tools:layout_editor_absoluteX="220dp"
-        tools:layout_editor_absoluteY="188dp" />
+        android:textColor="@color/saludo_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.586"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/ci_ciclo_vida"
+        android:id="@+id/cl_ciclo_vida"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="28dp"
-        android:text=" Ciclo Vida"
+        android:layout_marginEnd="8dp"
+        android:text="Ciclo Vida"
         app:layout_constraintBottom_toBottomOf="@+id/textView"
         app:layout_constraintEnd_toStartOf="@+id/textView"
         app:layout_constraintTop_toTopOf="@+id/textView"
@@ -33,11 +35,44 @@
         android:id="@+id/btn_ir_list_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:text="ListView"
-        app:layout_constraintEnd_toEndOf="@+id/ci_ciclo_vida"
+        android:layout_marginTop="40dp"
+        android:text="List view"
+        app:layout_constraintEnd_toEndOf="@+id/cl_ciclo_vida"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/ci_ciclo_vida"
-        app:layout_constraintTop_toBottomOf="@+id/ci_ciclo_vida" />
+        app:layout_constraintStart_toStartOf="@+id/cl_ciclo_vida"
+        app:layout_constraintTop_toBottomOf="@+id/cl_ciclo_vida" />
+
+    <Button
+        android:id="@+id/btn_ir_intent_explicito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="Explicito"
+        app:layout_constraintBottom_toTopOf="@+id/cl_ciclo_vida"
+        app:layout_constraintEnd_toEndOf="@+id/cl_ciclo_vida"
+        app:layout_constraintHorizontal_bias="0.619"
+        app:layout_constraintStart_toStartOf="@+id/cl_ciclo_vida" />
+
+    <Button
+        android:id="@+id/btn_ir_intent_implicito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Implicito"
+        app:layout_constraintBottom_toTopOf="@+id/btn_ir_intent_explicito"
+        app:layout_constraintEnd_toEndOf="@+id/btn_ir_intent_explicito"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btn_ir_intent_explicito" />
+
+    <Button
+        android:id="@+id/btn_sqlite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="Sqlite"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.482" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

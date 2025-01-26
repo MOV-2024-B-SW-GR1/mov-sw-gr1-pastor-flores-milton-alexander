@@ -1,6 +1,8 @@
 package com.example.sw2024bgr1_mapf
 
 import android.os.Bundle
+import android.util.Log
+import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -17,10 +19,15 @@ class ACicloVida : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        Log.d("MiApp", "Aqui si vale")
+
+        mostrarSnackbar("onCreate")
+
     }
 
     override fun onStart(){
         super.onStart()
+        Log.d("MiApp", "Aqui no se ")
         mostrarSnackbar("OnStart")
     }
 
@@ -72,9 +79,10 @@ class ACicloVida : AppCompatActivity() {
     fun mostrarSnackbar(text:String){
         textoGlobal += text
         val snack = Snackbar.make(
-            findViewById(R.id.ci_ciclo_vida),
+            findViewById(R.id.main_ciclo_vida),
             textoGlobal,
             Snackbar.LENGTH_INDEFINITE
         )
+        snack.show()
     }
 }
