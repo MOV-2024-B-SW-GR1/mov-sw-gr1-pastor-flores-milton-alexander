@@ -2,7 +2,6 @@ package com.example.examen02
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Switch
@@ -13,10 +12,9 @@ import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.snackbar.Snackbar
 import java.text.ParseException
 import java.text.SimpleDateFormat
-import java.util.Date
 import java.util.Locale
 
-class CrearTienda : AppCompatActivity() {
+class GestionTienda : AppCompatActivity() {
 
     private var idTienda: Int = -1
     private val formatoFecha = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
@@ -24,7 +22,7 @@ class CrearTienda : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_crear_tienda)
+        setContentView(R.layout.activity_gestion_tienda)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)

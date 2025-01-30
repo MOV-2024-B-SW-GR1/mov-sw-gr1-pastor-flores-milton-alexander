@@ -13,7 +13,16 @@
         android:theme="@style/Theme.Examen02"
         tools:targetApi="31">
         <activity
-            android:name=".CrearTienda"
+            android:name=".Tiendas"
+            android:exported="false" />
+        <activity
+            android:name=".GestionProducto"
+            android:exported="false" />
+        <activity
+            android:name=".Productos"
+            android:exported="false" />
+        <activity
+            android:name=".GestionTienda"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

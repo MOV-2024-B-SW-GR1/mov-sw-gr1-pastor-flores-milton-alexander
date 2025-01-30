@@ -1,6 +1,8 @@
 package com.example.examen02
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -16,5 +18,19 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        // Inicializar BDD
+        EBaseDeDatos.inicializarBaseDeDatos(this)
+
+
+
+        val botonInciar = findViewById<Button>(R.id.btn_inciar)
+        botonInciar.setOnClickListener {
+            irActividad(Tiendas::class.java)
+        }
+    }
+
+    fun irActividad(clase:Class<*>){
+        startActivity(Intent(this, clase))
     }
 }

@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Examen02</string>
+
+    <!-- Array para opciones del diálogo -->
+    <string-array name="string_array_opciones_dialogo">
+        <item>Opción 1</item>
+        <item>Opción 2</item>
+        <item>Opción 3</item>
+    </string-array>
+
 </resources>

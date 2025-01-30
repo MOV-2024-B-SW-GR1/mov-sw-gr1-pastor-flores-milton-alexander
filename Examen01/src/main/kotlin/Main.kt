@@ -14,11 +14,11 @@ data class Producto(
 )
 
 data class Tienda(
-    val id: Int,
-    val nombre: String,
-    val ubicacion: String,
-    val esFranquicia: Boolean,
-    val fechaDeCreacion: Date
+        val id: Int,
+        val nombre: String,
+        val ubicacion: String,
+        val esFranquicia: Boolean,
+        val fechaDeCreacion: Date
 )
 
 const val PATH_TIENDAS = "data/tiendas.txt" // Archivo para datos de tiendas

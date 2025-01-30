@@ -7,4 +7,41 @@
     android:layout_height="match_parent"
     tools:context=".Tiendas">
 
+    <!-- Título TIENDAS -->
+    <TextView
+        android:id="@+id/tvTiendas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="TIENDAS"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Botón CREAR -->
+
+    <!-- RecyclerView para la lista de tiendas -->
+
+    <Button
+        android:id="@+id/btnIrCrearTienda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:padding="8dp"
+        android:text="CREAR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/lv_lista_tiendas"
+        android:layout_width="323dp"
+        android:layout_height="525dp"
+        android:layout_marginTop="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTiendas" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
