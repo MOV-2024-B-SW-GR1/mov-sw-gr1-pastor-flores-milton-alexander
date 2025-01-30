@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".CrearTienda">
+
+    <!-- Campo Nombre -->
+
+    <!-- Campo Ubicación -->
+
+    <!-- Switch para Franquicia -->
+
+    <TextView
+        android:id="@+id/tvCrearTienda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Crear Tienda"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etNombreTienda"
+        android:layout_width="350dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="68dp"
+        android:hint="Nombre de la tienda"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnCrearTienda"
+        android:layout_width="350dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="16dp"
+        android:text="Crear"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etFechaCreacionTienda" />
+
+    <Switch
+        android:id="@+id/switchFranquiciaTienda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Es franquicia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.059"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etUbicacionTienda" />
+
+    <EditText
+        android:id="@+id/etUbicacionTienda"
+        android:layout_width="350dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="16dp"
+        android:hint="Ubicación"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etNombreTienda" />
+
+    <EditText
+        android:id="@+id/etFechaCreacionTienda"
+        android:layout_width="350dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="12dp"
+        android:hint="Fecha de Creación (dd/mm/yyyy)"
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/switchFranquiciaTienda" />
+
+    <!-- Campo Fecha de Creación -->
+
+    <!-- Botón Registrar -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
