@@ -41,9 +41,10 @@
         android:id="@+id/btnCrearTienda"
         android:layout_width="350dp"
         android:layout_height="46dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="160dp"
         android:text="Crear"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/etFechaCreacionTienda" />
 
@@ -66,6 +67,30 @@
         android:hint="Ubicación"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etNombreTienda" />
+
+    <EditText
+        android:id="@+id/etLongitudTienda"
+        android:layout_width="350dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="248dp"
+        android:hint="Longitud"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etNombreTienda" />
+
+    <EditText
+        android:id="@+id/etLatitudTienda"
+        android:layout_width="350dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="180dp"
+        android:hint="Latitud"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/etNombreTienda" />
 

@@ -95,6 +95,23 @@ class Tiendas : AppCompatActivity() {
                 return true
             }
 
+            R.id.ver_ubicacion -> {
+                // Redirigir a la actividad donde se presenta google map
+                val tiendaSeleccionada = tiendas[posicionItemSeleccionado] // Obtener la tienda seleccionada
+                val intent = Intent(this, GGoogleMaps::class.java)
+
+                // Enviar latitud, longitud y el nombre de la tienda
+                intent.putExtra("LATITUD", tiendaSeleccionada.latitud)
+                intent.putExtra("LONGITUD", tiendaSeleccionada.longitud)
+                intent.putExtra("NOMBRE_TIENDA", tiendaSeleccionada.nombre)
+
+
+                startActivity(intent)
+
+                return true
+            }
+
+
             else -> super.onContextItemSelected(item)
         }
     }

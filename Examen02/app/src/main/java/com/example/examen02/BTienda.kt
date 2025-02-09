@@ -11,30 +11,36 @@ data class BTienda(
     val nombre: String,
     val ubicacion: String,
     val esFranquicia: Boolean,
-    val fechaDeCreacion: Date
+    val fechaDeCreacion: Date,
+    val latitud: Double,  // Nuevo campo
+    val longitud: Double  // Nuevo campo
 ) : Parcelable {
 
     override fun toString(): String {
         val formatoFecha = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
         val fechaFormateada = formatoFecha.format(fechaDeCreacion)
         val tipo = if (esFranquicia) "Franquicia" else "Independiente"
-        return "$nombre - $ubicacion ($tipo) \nCreado: $fechaFormateada"
+        return "$nombre - $ubicacion ($tipo) \nCreado: $fechaFormateada \nUbicación: ($latitud, $longitud)"
     }
 
     constructor(parcel: Parcel) : this(
         parcel.readInt(),
         parcel.readString()!!,
         parcel.readString()!!,
-        parcel.readByte() != 0.toByte(), // Convertir byte a Boolean
-        Date(parcel.readLong()) // Leer la fecha en formato Long
+        parcel.readByte() != 0.toByte(),
+        Date(parcel.readLong()),
+        parcel.readDouble(), // Leer latitud
+        parcel.readDouble()  // Leer longitud
     )
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeInt(id)
         parcel.writeString(nombre)
         parcel.writeString(ubicacion)
-        parcel.writeByte(if (esFranquicia) 1 else 0) // Convertir Boolean a byte
-        parcel.writeLong(fechaDeCreacion.time) // Guardar la fecha como Long
+        parcel.writeByte(if (esFranquicia) 1 else 0)
+        parcel.writeLong(fechaDeCreacion.time)
+        parcel.writeDouble(latitud)  // Guardar latitud
+        parcel.writeDouble(longitud) // Guardar longitud
     }
 
     override fun describeContents(): Int {

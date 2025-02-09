@@ -8,7 +8,7 @@ class ESqliteHelper(
     contexto: Context?
 ) : SQLiteOpenHelper(
     contexto,
-    "movilesTienda", // Nombre único de la base de datos
+    "movilesTiendaExamen", // Nombre único de la base de datos
     null,
     1
 ) {
@@ -19,7 +19,9 @@ class ESqliteHelper(
                 nombre VARCHAR(50),
                 ubicacion VARCHAR(100),
                 esFranquicia INTEGER,
-                fechaDeCreacion TEXT
+                fechaDeCreacion TEXT,
+                latitud REAL,  
+                longitud REAL  
             );
         """.trimIndent()
 

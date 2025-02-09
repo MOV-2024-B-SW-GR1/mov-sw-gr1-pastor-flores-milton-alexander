@@ -1,4 +1,4 @@
-package com.example.examen02
+    package com.example.examen02
 
 import android.content.Intent
 import android.os.Bundle
@@ -21,8 +21,6 @@ class MainActivity : AppCompatActivity() {
 
         // Inicializar BDD
         EBaseDeDatos.inicializarBaseDeDatos(this)
-
-
 
         val botonInciar = findViewById<Button>(R.id.btn_inciar)
         botonInciar.setOnClickListener {

@@ -29,12 +29,15 @@ class GestionTienda : AppCompatActivity() {
             insets
         }
 
-        // Obtener referencias a los campos de entrada
+// Obtener referencias a los campos de entrada
         val etNombre = findViewById<EditText>(R.id.etNombreTienda)
         val etUbicacion = findViewById<EditText>(R.id.etUbicacionTienda)
         val switchFranquicia = findViewById<Switch>(R.id.switchFranquiciaTienda)
         val etFechaCreacion = findViewById<EditText>(R.id.etFechaCreacionTienda)
+        val etLatitud = findViewById<EditText>(R.id.etLatitudTienda)
+        val etLongitud = findViewById<EditText>(R.id.etLongitudTienda)
         val botonGuardarTienda = findViewById<Button>(R.id.btnCrearTienda)
+
 
         // Recuperar el ID de la tienda (si se está editando)
         idTienda = intent.getIntExtra("ID_TIENDA", -1)
@@ -61,21 +64,28 @@ class GestionTienda : AppCompatActivity() {
             val ubicacion = etUbicacion.text.toString()
             val esFranquicia = switchFranquicia.isChecked
             val fechaDeCreacionStr = etFechaCreacion.text.toString()
+            val latitudStr = etLatitud.text.toString()
+            val longitudStr = etLongitud.text.toString()
 
-            if (nombre.isNotEmpty() && ubicacion.isNotEmpty() && fechaDeCreacionStr.isNotEmpty()) {
+            if (nombre.isNotEmpty() && ubicacion.isNotEmpty() && fechaDeCreacionStr.isNotEmpty() &&
+                latitudStr.isNotEmpty() && longitudStr.isNotEmpty()) {
+
                 val fecha = try {
                     formatoFecha.parse(fechaDeCreacionStr)
                 } catch (e: ParseException) {
                     null
                 }
 
-                if (fecha != null) {
+                val latitud = latitudStr.toDoubleOrNull()
+                val longitud = longitudStr.toDoubleOrNull()
+
+                if (fecha != null && latitud != null && longitud != null) {
                     val respuesta = if (idTienda == -1) {
                         // Crear nueva tienda
-                        EBaseDeDatos.tablaTienda?.crearTienda(nombre, ubicacion, esFranquicia, fecha)
+                        EBaseDeDatos.tablaTienda?.crearTienda(nombre, ubicacion, esFranquicia, fecha, latitud, longitud)
                     } else {
                         // Actualizar tienda existente
-                        EBaseDeDatos.tablaTienda?.actualizarTienda(idTienda, nombre, ubicacion, esFranquicia, fecha)
+                        EBaseDeDatos.tablaTienda?.actualizarTienda(idTienda, nombre, ubicacion, esFranquicia, fecha, latitud, longitud)
                     }
 
                     if (respuesta == true) {
@@ -89,12 +99,13 @@ class GestionTienda : AppCompatActivity() {
                         mostrarSnackbar("Error al guardar la tienda")
                     }
                 } else {
-                    mostrarSnackbar("Fecha de creación no válida")
+                    mostrarSnackbar("Datos de fecha, latitud o longitud no válidos")
                 }
             } else {
                 mostrarSnackbar("Por favor, completa todos los campos correctamente")
             }
         }
+
     }
 
     private fun mostrarSnackbar(texto: String) {

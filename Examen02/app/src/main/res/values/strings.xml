@@ -7,5 +7,6 @@
         <item>Opción 2</item>
         <item>Opción 3</item>
     </string-array>
+    <string name="title_activity_ggoogle_maps_placeholder">GGoogleMapsPlaceholder</string>
 
 </resources>
